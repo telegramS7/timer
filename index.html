@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратный отсчёт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Установите время для обратного отсчёта</h1>
+        <div class="input-group">
+            <input type="number" id="hours-input" placeholder="Часы" min="0">
+            <input type="number" id="minutes-input" placeholder="Минуты" min="0" max="59">
+            <input type="number" id="seconds-input" placeholder="Секунды" min="0" max="59">
+        </div>
+        <button onclick="startCountdown()">Запустить таймер</button>
+        <button onclick="testSound()">Проверить звук</button> <!-- Новая кнопка -->
+        <div id="countdown">
+            <div>
+                <span id="display-hours">00</span>
+                <span class="label">Часов</span>
+            </div>
+            <div>
+                <span id="display-minutes">00</span>
+                <span class="label">Минут</span>
+            </div>
+            <div>
+                <span id="display-seconds">00</span>
+                <span class="label">Секунд</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Аудио для воспроизведения -->
+    <audio id="alarm-sound" src="alarm.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
